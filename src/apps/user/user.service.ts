@@ -1,12 +1,12 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { SupabaseClient } from '@supabase/supabase-js';
-import { User } from '../models/user.model';
+import { User } from '../../models/user.model';
 
 @Injectable()
 export class UserService {
     constructor(@Inject('SUPABASE_CLIENT') private readonly supabase: SupabaseClient) {}
 
-    async createUser(user: User) {
+    async createUser(user: Partial<User>) {
         const { data, error } = await this.supabase.from('users').insert(user);
         if (error) throw new Error(error.message);
         return data;

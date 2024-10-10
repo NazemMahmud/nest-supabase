@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { SupabaseClient } from '@supabase/supabase-js';
-import { Post } from '../models/post.model';
+import { Post } from '../../models/post.model';
 
 @Injectable()
 export class PostService {

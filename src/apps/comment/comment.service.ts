@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { SupabaseClient } from '@supabase/supabase-js';
-import { Comment } from '../models/comment.model';
+import { Comment } from '../../models/comment.model';
 
 @Injectable()
 export class CommentService {

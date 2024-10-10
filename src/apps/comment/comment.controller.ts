@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { CommentService } from './comment.service';
-import { Comment } from '../models/comment.model';
+import { Comment } from '../../models/comment.model';
 
 @Controller('comments')
 export class CommentController {

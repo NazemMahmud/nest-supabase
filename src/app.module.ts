@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { CommentModule } from './comment/comment.module';
-import { PostModule } from './post/post.module';
+import { CommentModule } from './apps/comment/comment.module';
+import { PostModule } from './apps/post/post.module';
 import { SupabaseModule } from "./configs/supabase/supabase.module";
-import { UserModule } from './user/user.module';
+import { UserModule} from "./apps/user/user.module";
 
 
 @Module({
